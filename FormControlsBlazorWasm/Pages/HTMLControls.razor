@@ -1,0 +1,16 @@
+﻿@page "/html-controls"
+@using FormControlsBlazorWasm.Models
+
+<h3>HTMLControls</h3>
+
+<EditForm Model="Person">
+    <label>Name:
+        <input type="text" @bind="Person.Name" @bind:event="oninput"/>
+    </label>
+</EditForm>
+
+<div>Person name: @Person.Name</div>
+
+@code {
+    public Person Person { get; set; } = new();
+}
